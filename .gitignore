@@ -1,0 +1,51 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+.venv/
+agn_env/
+
+# Caches
+*.log
+*.pot
+*.cache
+*.mo
+*.log
+*.dat
+*.pid
+
+# Distribution / packaging
+build/
+dist/
+.eggs/
+*.egg-info/
+
+# Graphs and data files (if dynamic or regeneratable)
+graphs/*.json
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Documentation generated
+docs/_build/
+
+# Pytest cache
+.pytest_cache/
+
+# Environments and secrets
+.env
+.env.*
+
+# IDE specific settings
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.bak
+*.swp
+*.swo
