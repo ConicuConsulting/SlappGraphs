@@ -47,9 +47,9 @@ The result is a more comprehensive, queryable knowledge graph that empowers lega
 
 ```mermaid
 graph TD
-    Section_61 -->|active| "Gross Income Defined"
-    Section_61 -->|jurisdiction| "Federal"
-    Section_61 -->|domain| "Tax Code"
+    Section_61 -->|"active"| Gross_Income_Defined
+    Section_61 -->|"jurisdiction"| Federal
+    Section_61 -->|"domain"| Tax_Code
 ```
 
 > **Popup Interaction Placeholder**: This example demonstrates how interactive exploration within Active Graphs can reveal specific attributes of a legal section, such as its status, jurisdiction, and domain. Legal professionals can explore details without navigating through multiple documents.
