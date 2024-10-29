@@ -1,4 +1,6 @@
-For **Defining Policies and ACLs** in Active Graphs, here’s a structured approach to flesh out the section:
+The diagram will work best in the **"Access Control Lists (ACLs) for Selective Access and Relationship Control"** subsection, right after explaining the key features of ACLs. This placement visually reinforces the concept of how ACLs and policies work together to manage relationships and security in Active Graphs.
+
+Here’s the revised section with the diagram placement noted:
 
 ---
 
@@ -24,14 +26,6 @@ ACLs in Active Graphs extend traditional permissions by introducing layered, att
 1. **Attribute-Based Access**: ACLs can restrict access based on node attributes, such as a user’s role, department, or region. For example, only administrators might have permission to modify relationships in a financial network, while regular users can view but not alter connections.
 2. **Inheritance**: ACLs can inherit properties from parent nodes, meaning that a node's access rules can cascade through the graph hierarchy. For instance, a *Manager* node might inherit permissions from a *Director* node, allowing for efficient management of access without duplicating ACLs across nodes.
 3. **Dynamic Relationship Control**: ACLs enable specific relationships to be created or restricted based on conditions, facilitating adaptive networks that evolve based on context. For example, a *Patient* node can connect to a *Diagnosis* node only if the ACL permits it, based on the patient’s health history or the doctor’s specialization.
-
-### Adding Depth to Data Security and Usability
-
-With policies and ACLs working in tandem, Active Graphs provide a framework that’s both secure and highly usable. Policies enable feature-rich data interactions that would otherwise require extensive custom code, while ACLs enforce security at a granular level. This dual approach not only prevents unauthorized access but also empowers the graph to self-manage and interpret its own relationships based on rules embedded directly within the network.
-
-The combination of policies and ACLs ensures that Active Graphs remain flexible and secure, adaptable to various industries and use cases where data relationships are complex and security is paramount.
-
----
 
 **Diagram Placeholder:**
 ```mermaid
@@ -63,4 +57,12 @@ graph LR
     Node_D -->|applies_in| Node_E
 ```
 
-This diagram can be updated to show specific examples based on the insights from the notebook you uploaded, further detailing how ACLs and policies drive dynamic relationship control within Active Graphs. Let me know if you’d like any additional adjustments!
+### Adding Depth to Data Security and Usability
+
+With policies and ACLs working in tandem, Active Graphs provide a framework that’s both secure and highly usable. Policies enable feature-rich data interactions that would otherwise require extensive custom code, while ACLs enforce security at a granular level. This dual approach not only prevents unauthorized access but also empowers the graph to self-manage and interpret its own relationships based on rules embedded directly within the network.
+
+The combination of policies and ACLs ensures that Active Graphs remain flexible and secure, adaptable to various industries and use cases where data relationships are complex and security is paramount.
+
+---
+
+By placing the diagram here, readers will have a visual representation of how policies and ACLs interact with the nodes, reinforcing their understanding of these mechanisms within Active Graphs. Let me know if you'd like any further customization or additional visuals!
