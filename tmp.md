@@ -1,35 +1,63 @@
-Here’s a Mermaid diagram that represents the basic structure of Active Graphs, showing nodes as small tables (entities like *Patient*, *Doctor*, and *Appointment*) and relationships (like **contains**, **inherits from**, and **relates to**) that create the foundational links among them.
+Here’s a set of Mermaid diagrams that illustrate both hierarchical and cross-domain relationships for Active Graphs. Each diagram provides a unique perspective on how data can be structured to manage complex, inter-domain connections dynamically.
+
+---
+
+### Hierarchical Structure Diagram
+
+This first diagram demonstrates a hierarchical structure, such as an organizational hierarchy. Here, **nodes** represent departments and individuals, and relationships like **reports to** or **manages** capture hierarchy.
 
 ```mermaid
 graph TD
 
-  subgraph Domain1[Healthcare Domain]
+  subgraph Organization[Organization]
+    CEO[CEO]
+    CTO[CTO]
+    HR[HR Manager]
+    DevTeam[Development Team]
+    Dev1[Developer A]
+    Dev2[Developer B]
+  end
+
+  CEO --> CTO
+  CEO --> HR
+  CTO --> DevTeam
+  DevTeam -- reports to --> CTO
+  DevTeam --> Dev1
+  DevTeam --> Dev2
+```
+
+---
+
+### Cross-Domain Structure Diagram
+
+This diagram shows a **multi-domain structure**, such as a healthcare system where *Patient* and *Doctor* nodes in the **Healthcare Domain** are linked to *Policy* in the **Financial Domain**. This showcases how relationships cross domains and enable inferencing across them.
+
+```mermaid
+graph TD
+
+  subgraph HealthcareDomain[Healthcare Domain]
     Patient[Patient]
     Doctor[Doctor]
     MedicalRecord[Medical Record]
+    Diagnosis[Diagnosis]
     Appointment[Appointment]
   end
 
-  subgraph Domain2[Financial Domain]
+  subgraph FinancialDomain[Financial Domain]
     Policy[Insurance Policy]
   end
 
-  Patient -- contains --> MedicalRecord
-  Doctor -- conducts --> Appointment
+  Patient -- has --> MedicalRecord
+  Doctor -- performs --> Diagnosis
   Patient -- attends --> Appointment
   MedicalRecord -- relates to --> Diagnosis
-  Diagnosis -- relates to --> Policy
-
-  Diagnosis -- inherits from --> Condition
-  Doctor -- inherits from --> Practitioner
+  Diagnosis -- covered by --> Policy
 ```
 
 In this structure:
-- Each **node** (e.g., *Patient*, *Doctor*, *Medical Record*) functions like a mini-table with data attributes specific to that entity.
-- **Relationships** illustrate predefined links, such as:
-  - **contains** (e.g., *Patient* contains *Medical Record*)
-  - **conducts** (e.g., *Doctor* conducts *Appointment*)
-  - **relates to** (e.g., *Diagnosis* relates to *Policy*)
-- **Inheritance** links are shown where one node inherits attributes or characteristics from another.
+- **Hierarchical connections**: Within each domain (e.g., *Healthcare Domain*), nodes are connected by relationships relevant to their context.
+- **Cross-domain links**: Relationships like **covered by** connect nodes from different domains, bridging *Diagnosis* in the *Healthcare Domain* to *Policy* in the *Financial Domain*.
 
-This diagram can be expanded to include specific policy-based relationships, ACLs, and other custom structures to suit the domain or application context. Would you like to refine any part of this diagram or add additional nodes?
+---
+
+These diagrams emphasize how Active Graphs seamlessly handle both hierarchical and cross-domain relationships, enabling rich data interaction and inference capabilities across complex datasets. Let me know if you need further adjustments or additional connections!
