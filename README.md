@@ -1,6 +1,3 @@
-Here's a README for **SlappGraphs**:
-
----
 
 # SlappGraphs
 
@@ -141,7 +138,3 @@ python scripts/1_test_node_creation.py
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-This README provides a comprehensive overview of the **SlappGraphs** project and can be adjusted as the project evolves. Let me know if you'd like to customize it further!
